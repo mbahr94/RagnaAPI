@@ -1,0 +1,27 @@
+{
+  "name": "ragnaapi",
+  "version": "1.0.0",
+  "description": "rAthena MarketDB Read-Only API",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc & node dist/index.js",
+    "dev": "tsc -w & nodemon dist/index.js"
+  },
+  "author": "mbahr94",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.12",
+    "@types/mysql": "^2.15.18",
+    "@types/node": "^15.12.5",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5"
+  }
+}
