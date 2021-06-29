@@ -5,7 +5,7 @@ import * as dotenv from "dotenv";
 import * as bodyParser from "body-parser";
 const vendingRouter = express.Router();
 const app = express();
-dotenv.config()
+dotenv.config({path: "/.env"})
 
 var cachedResponse = { "data": <VendingData[]> [] };
 var readyToQuery = true;
@@ -25,9 +25,10 @@ vendingRouter.get('/', async(req: Request, res: Response) => {
     }
 });
 
+const timer: number = parseInt(`${process.env.API_CACHE_TIME}`) || 300000;
 setInterval(function(){ 
     readyToQuery = true;
-}, 300000);
+}, timer);
 
 const port =  3000;
 
